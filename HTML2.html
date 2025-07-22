@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm: Mental Health & Fitness for India</title>
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+       
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden; 
+        }
+        
+        .primary-color { background-color: #4CAF50; } 
+        .text-primary-color { color: #4CAF50; }
+        .border-primary-color { border-color: #4CAF50; }
+        .hover-primary-color:hover { background-color: #66BB6A; } 
+        .accent-color { background-color: #FFC107; } 
+        .text-accent-color { color: #FFC107; }
+        .shadow-custom { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .shadow-hover-custom:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+
+       
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+   
+    <header class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-3xl font-bold text-primary-color">Calm</div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#features" class="text-gray-700 hover:text-primary-color font-semibold transition duration-300">Features</a></li>
+                <li><a href="#affirmation" class="text-gray-700 hover:text-primary-color font-semibold transition duration-300">Affirmation</a></li>
+                <li><a href="#testimonials" class="text-gray-700 hover:text-primary-color font-semibold transition duration-300">Testimonials</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-primary-color font-semibold transition duration-300">About Us</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-primary-color font-semibold transition duration-300">Contact</a></li>
+            </ul>
+            <button class="hidden md:block primary-color text-white py-2 px-6 rounded-lg font-semibold hover-primary-color transition duration-300 transform hover:-translate-y-1 shadow-md">Download App</button>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+       
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <ul class="text-2xl font-semibold text-gray-800 space-y-6">
+                <li><a href="#features" class="block py-2 hover:text-primary-color">Features</a></li>
+                <li><a href="#affirmation" class="block py-2 hover:text-primary-color">Affirmation</a></li>
+                <li><a href="#testimonials" class="block py-2 hover:text-primary-color">Testimonials</a></li>
+                <li><a href="#about" class="block py-2 hover:text-primary-color">About Us</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-primary-color">Contact</a></li>
+            </ul>
+            <button class="primary-color text-white py-3 px-8 rounded-lg font-semibold text-xl hover-primary-color transition duration-300 transform hover:-translate-y-1 shadow-md">Download App</button>
+        </div>
+    </header>
+
+    <main>
+       
+        <section class="hero-section container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8 md:gap-16 min-h-[80vh]">
+            <div class="hero-content md:w-1/2">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-primary-color mb-6">Find Your Inner Peace, The Indian Way.</h1>
+                <p class="text-xl text-gray-600 mb-8">Personalized mental wellness and fitness solutions rooted in Indian traditions and modern science, for a balanced life.</p>
+                <div class="hero-buttons flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <button class="primary-button primary-color text-white py-3 px-8 rounded-lg font-semibold text-lg hover-primary-color transition duration-300 transform hover:-translate-y-1 shadow-md">Start Your Journey</button>
+                    <button class="secondary-button bg-transparent text-primary-color border-2 border-primary-color py-3 px-8 rounded-lg font-semibold text-lg hover:bg-primary-color hover:text-white transition duration-300 transform hover:-translate-y-1 shadow-md">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image md:w-1/2 flex justify-center items-center">
+                
+                <img src="https://placehold.co/600x400/D4EDDA/216F3E?text=Serene+Meditation" alt="Person meditating or doing yoga in a peaceful Indian setting" class="rounded-xl shadow-lg max-w-full h-auto">
+            </div>
+        </section>
+
+       
+        <section id="features" class="features-section bg-white py-16 md:py-24 container mx-auto px-4 rounded-xl shadow-lg my-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary-color mb-12 text-center">Why Choose Calm?</h2>
+            <div class="feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-item bg-gray-50 p-8 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/80x80/E0F2F1/26A69A?text=🧘" alt="Meditation icon" class="mx-auto mb-6 w-20 h-20">
+                    <h3 class="text-2xl font-semibold text-primary-color mb-3">Guided Meditations</h3>
+                    <p class="text-gray-600">Experience peace with guided sessions inspired by ancient Indian practices and modern mindfulness techniques.</p>
+                </div>
+                <div class="feature-item bg-gray-50 p-8 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/80x80/E0F2F1/26A69A?text=🕉️" alt="Yoga icon" class="mx-auto mb-6 w-20 h-20">
+                    <h3 class="text-2xl font-semibold text-primary-color mb-3">Yoga & Pranayama</h3>
+                    <p class="text-gray-600">Daily routines and challenges for all levels, focusing on holistic well-being through traditional Indian yoga.</p>
+                </div>
+                <div class="feature-item bg-gray-50 p-8 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/80x80/E0F2F1/26A69A?text=🧠" alt="Therapy icon" class="mx-auto mb-6 w-20 h-20">
+                    <h3 class="text-2xl font-semibold text-primary-color mb-3">Culturally Sensitive Therapy</h3>
+                    <p class="text-gray-600">Access to qualified Indian therapists and culturally sensitive content for mental support and guidance.</p>
+                </div>
+                <div class="feature-item bg-gray-50 p-8 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="https://placehold.co/80x80/E0F2F1/26A69A?text=🍎" alt="Nutrition icon" class="mx-auto mb-6 w-20 h-20">
+                    <h3 class="text-2xl font-semibold text-primary-color mb-3">Holistic Wellness</h3>
+                    <p class="text-gray-600">Integrate mind, body, and spirit with Ayurvedic tips and personalized fitness plans for overall health.</p>
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="affirmation" class="affirmation-section bg-white py-16 md:py-24 container mx-auto px-4 rounded-xl shadow-lg my-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary-color mb-8">✨ Daily Dose of Calm ✨</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Click the button below to receive a personalized positive affirmation, crafted just for you to uplift your spirit and set a positive tone for your day.</p>
+            <button id="generate-affirmation-btn" class="primary-color text-white py-3 px-8 rounded-lg font-semibold text-lg hover-primary-color transition duration-300 transform hover:-translate-y-1 shadow-md">
+                Generate My Affirmation ✨
+            </button>
+            <div id="affirmation-output" class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner text-center text-xl text-gray-700 min-h-[80px] flex items-center justify-center italic">
+                Your affirmation will appear here...
+            </div>
+            <div id="affirmation-loading" class="hidden mt-4 text-primary-color font-semibold">
+                Generating your calm...
+            </div>
+        </section>
+
+       
+        <section id="testimonials" class="testimonials-section bg-gray-50 py-16 md:py-24">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary-color mb-12 text-center">Hear From Our Users</h2>
+            <div class="testimonial-carousel container mx-auto px-4 flex overflow-x-auto snap-x snap-mandatory gap-8 pb-4">
+                <div class="testimonial-item flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white p-8 rounded-lg shadow-md snap-start">
+                    <p class="text-lg italic text-gray-700 mb-4">"Calm has truly transformed my daily routine. The meditation sessions are incredibly soothing and fit perfectly into my busy schedule."</p>
+                    <h4 class="text-xl font-semibold text-primary-color">- Priya Sharma, Bengaluru</h4>
+                </div>
+                <div class="testimonial-item flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white p-8 rounded-lg shadow-md snap-start">
+                    <p class="text-lg italic text-gray-700 mb-4">"Finally, a wellness app that understands Indian contexts. The yoga routines are perfect for my home practice, and the tips are so relevant!"</p>
+                    <h4 class="text-xl font-semibold text-primary-color">- Rahul Singh, Delhi</h4>
+                </div>
+                <div class="testimonial-item flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white p-8 rounded-lg shadow-md snap-start">
+                    <p class="text-lg italic text-gray-700 mb-4">"I appreciate the focus on mental health. It's truly helped me manage stress and find a sense of balance amidst life's challenges."</p>
+                    <h4 class="text-xl font-semibold text-primary-color">- Anjali Devi, Mumbai</h4>
+                </div>
+                <div class="testimonial-item flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 bg-white p-8 rounded-lg shadow-md snap-start">
+                    <p class="text-lg italic text-gray-700 mb-4">"The app's interface is so user-friendly, and the content is top-notch. It's like having a personal wellness coach in my pocket."</p>
+                    <h4 class="text-xl font-semibold text-primary-color">- Vikram Patel, Ahmedabad</h4>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="cta-section primary-color text-white py-16 md:py-24 text-center rounded-xl shadow-lg my-16 container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Begin Your Journey to Calm?</h2>
+            <p class="text-xl mb-10">Download the Calm app today and discover a healthier, happier you, rooted in well-being.</p>
+            <div class="cta-buttons flex flex-col sm:flex-row justify-center gap-6">
+                <button class="bg-white text-primary-color py-4 px-10 rounded-lg font-semibold text-xl hover:bg-gray-200 transition duration-300 transform hover:-translate-y-1 shadow-lg">
+                    Download on Google Play
+                </button>
+                <button class="bg-white text-primary-color py-4 px-10 rounded-lg font-semibold text-xl hover:bg-gray-200 transition duration-300 transform hover:-translate-y-1 shadow-lg">
+                    Download on App Store
+                </button>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <p class="mb-4">&copy; 2025 Calm. All rights reserved.</p>
+            <div class="social-links space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+            </div>
+            <div class="mt-6 text-gray-500 text-sm">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> |
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; 
+            });
+
+            closeMobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = ''; 
+            });
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = ''; 
+                });
+            });
+
+
+           
+
+            
+            gsap.from(".hero-content h1", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+
+            gsap.from(".hero-content p", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+
+            gsap.from(".hero-buttons .primary-button", {
+                opacity: 0,
+                x: -50,
+                duration: 1,
+                delay: 0.6,
+                ease: "power3.out"
+            });
+
+            gsap.from(".hero-buttons .secondary-button", {
+                opacity: 0,
+                x: 50,
+                duration: 1,
+                delay: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from(".hero-image img", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 1.5,
+                delay: 0.7,
+                ease: "back.out(1.7)"
+            });
+
+            
+            gsap.utils.toArray(".feature-item").forEach(item => {
+                gsap.from(item, {
+                    opacity: 0,
+                    y: 100,
+                    scale: 0.9,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%", 
+                        toggleActions: "play none none reverse", 
+                    }
+                });
+            });
+
+            
+            gsap.from(".affirmation-section h2", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".affirmation-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            gsap.from(".affirmation-section p", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".affirmation-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            gsap.from("#generate-affirmation-btn", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 1,
+                delay: 0.4,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: ".affirmation-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+           
+            gsap.utils.toArray(".testimonial-item").forEach(item => {
+                gsap.from(item, {
+                    opacity: 0,
+                    x: 100,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse",
+                    }
+                });
+            });
+
+            
+            gsap.from(".cta-section h2", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".cta-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            gsap.from(".cta-section p", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".cta-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            gsap.from(".cta-buttons button", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.2, 
+                duration: 0.8,
+                delay: 0.4,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".cta-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            
+            const generateAffirmationBtn = document.getElementById('generate-affirmation-btn');
+            const affirmationOutput = document.getElementById('affirmation-output');
+            const affirmationLoading = document.getElementById('affirmation-loading');
+
+            generateAffirmationBtn.addEventListener('click', async () => {
+                affirmationOutput.textContent = ''; 
+                affirmationLoading.classList.remove('hidden'); 
+
+                const prompt = "Generate a short, positive, and uplifting affirmation for daily mental well-being, suitable for an Indian audience. Keep it concise, around 15-20 words.";
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "AIzaSyAR8ZqufG9nzCmHGBeZKLd0E9AM9NSFMIk"; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        affirmationOutput.textContent = text;
+                    } else {
+                        affirmationOutput.textContent = "Sorry, couldn't generate an affirmation right now. Please try again.";
+                        console.error("Gemini API response structure unexpected:", result);
+                    }
+                } catch (error) {
+                    affirmationOutput.textContent = "Error generating affirmation. Please check your connection.";
+                    console.error("Error calling Gemini API:", error);
+                } finally {
+                    affirmationLoading.classList.add('hidden'); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
